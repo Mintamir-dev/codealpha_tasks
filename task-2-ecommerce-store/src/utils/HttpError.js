@@ -1,0 +1,8 @@
+class HttpError extends Error {
+  constructor(status, message, fields) {
+    super(message);
+    this.status = status;
+    this.fields = fields; // optional { fieldName: message }
+  }
+}
+module.exports = HttpError;
